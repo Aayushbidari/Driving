@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn to drive safely and confidently with Horizon Driving School in Surrey, BC. Experienced instructors, personalized lessons, and proven success." />
+  <meta name="keywords" content="Driving School, Horizon Driving, Driving Lessons, Surrey Driving School, Learn to Drive BC, Road Test Prep" />
+  <meta name="author" content="Horizon Driving School" />
+  <title>Aayush Driving School | Driving Lessons in Surrey, BC</title>
+  <link rel="canonical" href="https://www.horizondrivingschool.com/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-KY4OHqYr+..." />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      color: #e63946;
+    }
+
+    /* This section is the main hero section with image slider and call-to-action */
+    .two-column-section {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .two-column-section .left,
+    .two-column-section .right {
+      flex: 1 1 100%;
+    }
+
+    @media(min-width: 768px) {
+      .two-column-section .left,
+      .two-column-section .right {
+        flex: 1;
+      }
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slider img.active {
+      opacity: 1;
+      position: relative;
+    }
+
+    .two-column-section .right h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .two-column-section .right p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .two-column-section .right .btn {
+      background-color: #e63946;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .two-column-section .right .btn:hover {
+      background-color: #cc2f3e;
+    }
+
+    /* About Us section */
+    .about-us {
+      background-color: #f1f1f1;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about-us h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-us p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    .about-us .learn-more-btn {
+      background-color: #e63946;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .about-us .learn-more-btn:hover {
+      background-color: #cc2f3e;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-us {
+      background-color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .why-choose-us h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .why-choose-us .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .why-choose-us .features .feature {
+      width: 280px;
+      text-align: center;
+    }
+
+    .why-choose-us .features i {
+      font-size: 3rem;
+      color: #e63946;
+      margin-bottom: 10px;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      background-color: #f7f7f7;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .testimonials .carousel {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .testimonial {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .testimonial p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .testimonial h4 {
+      font-size: 1.2rem;
+      color: #e63946;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-column {
+      flex: 1 1 100%;
+      margin: 20px 0;
+    }
+
+    @media(min-width: 600px) {
+      .footer-column {
+        flex: 1 1 200px;
+      }
+    }
+
+    .footer-column h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="https://www.horizondrivingschool.com/wp-content/uploads/2020/07/horizon-driving-school-logo-300x84.png" alt="Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main hero section with image slider and call-to-action -->
+  <section class="two-column-section">
+    <div class="left">
+      <div class="slider" role="region" aria-label="Driving School Image Slider">
+        <img src="https://www.horizondrivingschool.com/wp-content/uploads/2020/07/horizon-car.jpg" class="active" alt="Driving School Car">
+        <img src="https://www.horizondrivingschool.com/wp-content/uploads/2020/07/driving-lessons.jpg" alt="Student Taking Driving Lesson">
+        <img src="https://www.horizondrivingschool.com/wp-content/uploads/2020/07/horizon-logo-wide.jpg" alt="Horizon Driving School Logo Banner">
+      </div>
+    </div>
+    <div class="right">
+      <h2>Professional Driving Lessons</h2>
+      <p>At Horizon Driving School, we provide top-notch instruction tailored to your needs. Whether you're a beginner or looking to refine your skills, our certified instructors are here to guide you every step of the way.</p>
+      <a href="#" class="btn">Register Now</a>
+    </div>
+  </section>
+
+  <!-- About Us section -->
+  <section class="about-us">
+    <h2>About Us</h2>
+    <p>At Horizon Driving School, we have been dedicated to providing high-quality driving education for over 10 years. Our team of experienced instructors is passionate about ensuring that every student becomes a confident and responsible driver. We believe in offering personalized lessons that suit your pace and learning style, ensuring you gain the skills and knowledge needed to pass your driving test and drive safely on the roads.</p>
+    <a href="#" class="learn-more-btn">Learn More</a>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+      <div class="feature">
+        <i class="fas fa-user-graduate"></i>
+        <h3>Certified Instructors</h3>
+        <p>Our team consists of highly trained, certified instructors who are dedicated to your success.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-clock"></i>
+        <h3>Flexible Schedules</h3>
+        <p>We offer flexible schedules to fit your busy lifestyle. Book lessons at your convenience.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-car"></i>
+        <h3>Modern Vehicles</h3>
+        <p>We have a fleet of modern, safe vehicles equipped for your learning comfort and confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Students Say</h2>
+    <div class="carousel">
+      <div class="testimonial">
+        <p>"Horizon Driving School helped me pass my driving test on the first try! The instructors were patient and professional."</p>
+        <h4>Jane Doe</h4>
+      </div>
+      <div class="testimonial">
+        <p>"The lessons were easy to follow, and I felt completely prepared for my test. Highly recommended!"</p>
+        <h4>John Smith</h4>
+      </div>
+      <div class="testimonial">
+        <p>"I learned so much in a short time. The instructors are amazing, and the whole experience was great!"</p>
+        <h4>Emily Johnson</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Horizon Driving School</h4>
+        <p>Serving Surrey, Delta, Langley, Cloverdale, White Rock and surrounding areas.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Info</h4>
+        <ul>
+          <li>Email: info@horizondrivingschool.com</li>
+          <li>Phone: (123) 456-7890</li>
+          <li>Surrey, BC, Canada</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Horizon Driving School. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const images = document.querySelectorAll('.slider img');
+    let current = 0;
+
+    setInterval(() => {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }, 3000);
+  </script>
+</body>
+</html>
